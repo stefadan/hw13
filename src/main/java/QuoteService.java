@@ -75,7 +75,7 @@ public class QuoteService {
 
     public List<Quote> getFavourites() {
         List<Quote> result = new ArrayList<>();
-        HashSet<Quote> hashSet = new HashSet<Quote>();
+        HashSet<Quote> hashSet = new HashSet<>();
         int[] arr = {100, 200, 300, 400};
         for (int i = 0; i < quoteList.size(); i++) {
             for (int j = 0; j < arr.length; j++) {
@@ -93,7 +93,7 @@ public class QuoteService {
     public String getRandomQuote() {
         String result = null;
         Random random = new Random();
-        Integer position = random.nextInt(quoteList.size());
+        int position = random.nextInt(quoteList.size());
         for (int i = 0; i < quoteList.size(); i++) {
             if (position == i) {
                 result = quoteList.get(i).getQuote();
